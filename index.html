@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country Explorer</title>
+    <link rel="stylesheet" href="./output/output.css" />
+  </head>
+  <body
+    class="flex bg-gradient-to-r from-red-400 to-black justify-center md:justify-center md:items-center font-mono min-h-screen"
+  >
+    <div
+      class="w-11/12 flex flex-col space-y-10 rounded-lg p-5 max-w-[1200px] justify-center items-center"
+      id="container"
+    >
+      <div
+        class="flex flex-col md:flex-row justify-between items-center mx-auto w-full"
+      >
+        <form
+          class="w-full flex flex-col space-y-4 justify-between items-center md:flex-row md:space-y-0 md:justify-around md:items-center"
+          method="get"
+        >
+          <label
+            for="country"
+            class="text-white font-mono text-xl font-semibold"
+            >Country:
+          </label>
+          <input
+            type="text"
+            name="country"
+            id="country"
+            class="rounded-md py-2 px-4 w-2/3 focus:outline-none focus:ring focus:ring-red-200 placeholder:text-slate-500"
+            placeholder="France"
+          />
+          <button
+            class="px-4 py-2 rounded-md border-2 text-white hover:bg-white hover:text-black hover:font-semibold"
+            id="submit-btn"
+          >
+            Get detail
+          </button>
+        </form>
+      </div>
+      <div
+        class="flex flex-col w-full md:w-1/2 rounded-lg mx-auto shadow-lg shadow-black/50"
+        id="card-container"
+      ></div>
+      <button
+        type="reset"
+        class="px-4 py-2 rounded-md border-2 text-white hover:bg-white hover:text-black hover:font-semibold mt-6 hidden transition-all duration-150"
+        id="reset"
+      >
+        Reset
+      </button>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
